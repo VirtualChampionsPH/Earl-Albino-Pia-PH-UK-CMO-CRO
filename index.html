@@ -65,7 +65,7 @@
     .header {
       background: var(--blue);
       border-radius: 24px 24px 0 0;
-      padding: 36px 28px 28px;
+      padding: 30px 24px 26px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -79,30 +79,32 @@
       top: -40px; right: -40px;
       width: 160px; height: 160px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.07);
       pointer-events: none;
     }
     .header::after {
       content: '';
       position: absolute;
-      bottom: -30px; left: -30px;
-      width: 120px; height: 120px;
+      bottom: -28px; left: -28px;
+      width: 100px; height: 100px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.05);
       pointer-events: none;
     }
 
     .avatar-wrap {
       position: relative;
       z-index: 1;
-      margin-bottom: 14px;
+      margin-bottom: 11px;
+      width: 76px;
+      height: 76px;
     }
 
     .avatar {
-      width: 88px;
-      height: 88px;
+      width: 76px;
+      height: 76px;
       border-radius: 50%;
-      border: 3.5px solid rgba(255,255,255,0.45);
+      border: 3px solid rgba(255,255,255,0.4);
       object-fit: cover;
       object-position: center top;
       display: block;
@@ -111,41 +113,124 @@
 
     .avatar-badge {
       position: absolute;
-      bottom: 2px; right: 2px;
-      width: 22px; height: 22px;
+      bottom: 0px; right: -8px;
       background: var(--white);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 11px;
+      border-radius: 20px;
+      border: 2px solid var(--blue);
+      padding: 2px 6px;
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.5px;
+      line-height: 1.4;
+      z-index: 3;
+      white-space: nowrap;
     }
 
     .h-name {
       font-family: var(--font-display);
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       color: #fff;
       text-align: center;
       z-index: 1;
-      letter-spacing: -0.2px;
     }
 
     .h-role {
-      font-size: 11px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.68);
+      font-size: 10px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.65);
       text-align: center;
-      margin: 5px 0 8px;
+      margin: 4px 0 18px;
       z-index: 1;
       letter-spacing: 0.3px;
     }
 
-    .h-bio {
-      font-size: 12.5px;
-      color: rgba(255,255,255,0.84);
-      text-align: center;
-      line-height: 1.65;
+    /* ── Copy block ── */
+    .h-copy {
+      width: 100%;
       z-index: 1;
-      max-width: 300px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .h-line1 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 8px;
+      white-space: nowrap;
+    }
+
+    .h-line2 {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.65;
+      margin-bottom: 6px;
+    }
+
+    .h-line3 {
+      font-size: 12px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.65;
+    }
+
+    .h-line3 b {
+      font-weight: 700;
+    }
+
+    /* ── Team badges ── */
+    .h-divider {
+      width: 100%;
+      height: 0.5px;
+      background: rgba(255,255,255,0.18);
+      margin-bottom: 12px;
+      z-index: 1;
+    }
+
+    .h-team-label {
+      font-size: 8px;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 9px;
+      z-index: 1;
+      width: 100%;
+      text-align: left;
+    }
+
+    .h-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      justify-content: flex-start;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .h-badge {
+      background: rgba(255,255,255,0.12);
+      border: 0.5px solid rgba(255,255,255,0.22);
+      border-radius: 20px;
+      padding: 4px 11px;
+      font-size: 10.5px;
+      color: #fff;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .h-badge-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      flex-shrink: 0;
     }
 
 
@@ -408,9 +493,23 @@
         <div class="avatar-badge">🇵🇭</div>
       </div>
       <h1 class="h-name">Earl Clyde Matthew Pia</h1>
-      <p class="h-role">CMO & CRO · Virtual Champions PH</p>
-      <p class="h-bio">10X your business through a proven sales, marketing, and business development strategy powered by the heart and work ethic of Filipino remote professionals — managed full-stack team of ClickUp experts, GHL experts, Creatives, Operations admin, and Marketers.</p>
+      <p class="h-role">CMO &amp; CRO · Virtual Champions PH</p>
 
+      <div class="h-copy">
+        <p class="h-line1">10X your business.</p>
+        <p class="h-line2">through a proven business development,<br>sales &amp; marketing strategy</p>
+        <p class="h-line3">powered by the <b>heart</b>, <b>work ethic</b><br>of <b>Filipino remote professionals</b>.</p>
+      </div>
+
+      <div class="h-divider"></div>
+      <p class="h-team-label">Managed full-stack team</p>
+      <div class="h-badges">
+        <div class="h-badge"><span class="h-badge-dot"></span>ClickUp Experts</div>
+        <div class="h-badge"><span class="h-badge-dot"></span>GHL Experts</div>
+        <div class="h-badge"><span class="h-badge-dot"></span>Creatives</div>
+        <div class="h-badge"><span class="h-badge-dot"></span>Operations Admin</div>
+        <div class="h-badge"><span class="h-badge-dot"></span>Marketers</div>
+      </div>
     </div>
 
     <!-- ── Links Body ── -->
