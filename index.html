@@ -146,6 +146,17 @@
       letter-spacing: 0.3px;
     }
 
+    .h-role a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .h-role a:hover {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
     /* ── Copy block ── */
     .h-copy {
       width: 100%;
@@ -287,8 +298,8 @@
     .feat-card:active { transform: translateY(0); }
 
     .feat-tiktok {
-      background: linear-gradient(135deg, #fff0f3 0%, #ffe8ef 100%);
-      border: 1px solid #ffc8d4;
+      background: linear-gradient(135deg, #fff7ed 0%, #fff1f2 100%);
+      border: 1px solid #fda4af;
     }
     .feat-youtube {
       background: linear-gradient(135deg, #fff5f0 0%, #ffede3 100%);
@@ -301,8 +312,28 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 16px;
     }
-    .feat-tiktok .feat-icon { background: #ff2d55; }
-    .feat-youtube .feat-icon { background: #ff4500; }
+    .feat-tiktok .feat-icon {
+      background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+      color: #fff7ed;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.24);
+    }
+    .feat-youtube .feat-icon {
+      background: #ff0000;
+      color: #fff;
+    }
+
+    .feat-icon svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+      fill: currentColor;
+    }
+
+    .feat-tiktok .feat-icon svg {
+      width: 23px;
+      height: 23px;
+      fill: none;
+    }
 
     .feat-platform {
       font-size: 8.5px;
@@ -312,7 +343,7 @@
       width: fit-content;
       letter-spacing: 0.4px;
     }
-    .feat-tiktok .feat-platform { background: #ffe0e8; color: #c4003d; }
+    .feat-tiktok .feat-platform { background: #ffe4e6; color: #be123c; }
     .feat-youtube .feat-platform { background: #ffe6d8; color: #b83200; }
 
     .feat-title {
@@ -366,8 +397,78 @@
       font-size: 15px;
       flex-shrink: 0;
     }
-    .solid .btn-icon { background: rgba(255,255,255,0.15); }
-    .outline .btn-icon { background: var(--blue-light); }
+    .solid .btn-icon {
+      background: #f8fbff;
+      color: var(--blue);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.55);
+    }
+    .outline .btn-icon {
+      background: var(--blue-light);
+      color: var(--blue);
+      box-shadow: inset 0 0 0 1px rgba(18,72,237,0.08);
+    }
+
+    .outline .btn-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      display: block;
+    }
+
+    .outline .tool-clickup { background: #eef3ff; color: #1248ed; }
+    .outline .tool-make { background: #fff3ee; color: #ea580c; }
+    .outline .tool-hubstaff { background: #f1f5ff; color: #4f46e5; }
+    .outline .tool-rize { background: #ecfdf5; color: #047857; }
+    .outline .tool-gamma { background: #f5f0ff; color: #7c3aed; }
+
+    .solid .btn-icon.community-icon {
+      background: linear-gradient(135deg, #ffffff 0%, #eef3ff 100%);
+      color: var(--blue);
+      box-shadow:
+        inset 0 0 0 1px rgba(18,72,237,0.10),
+        0 5px 12px rgba(18,72,237,0.16);
+    }
+
+    .solid .btn-icon.careers-icon {
+      background: linear-gradient(135deg, #ffffff 0%, #eef3ff 100%);
+      color: var(--blue);
+      box-shadow:
+        inset 0 0 0 1px rgba(18,72,237,0.10),
+        0 5px 12px rgba(18,72,237,0.16);
+    }
+
+    .solid .btn-icon.tiktok-icon {
+      background: linear-gradient(135deg, #ffffff 0%, #eef3ff 100%);
+      color: var(--blue);
+      box-shadow:
+        inset 0 0 0 1px rgba(18,72,237,0.10),
+        0 5px 12px rgba(18,72,237,0.16);
+    }
+
+    .solid .btn-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      display: block;
+    }
+
+    .solid .btn-icon .fill-icon {
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .solid .btn-icon.tiktok-icon svg {
+      fill: none;
+      stroke: none;
+    }
 
     .btn-text { flex: 1; }
 
@@ -487,13 +588,13 @@
       <div class="avatar-wrap">
         <img
           class="avatar"
-          src="https://assets.cdn.filesafe.space/uSnUEDhJvTm8j8G3HmZy/media/6a1678b7ab53822e7e01c9db.jpg"
+          src="./earl-avatar.jpg"
           alt="Earl Clyde Matthew Pia"
         />
         <div class="avatar-badge">🇵🇭</div>
       </div>
       <h1 class="h-name">Earl Clyde Matthew Pia</h1>
-      <p class="h-role">CMO &amp; CRO · Virtual Champions PH</p>
+      <p class="h-role">CMO &amp; CRO · <a href="https://virtualchampions.ph" target="_blank" rel="noopener">Virtual Champions</a> | <a href="https://introllect.com" target="_blank" rel="noopener">Introllect</a></p>
 
       <div class="h-copy">
         <p class="h-line1">10X your business.</p>
@@ -524,13 +625,31 @@
 
       <div class="feat-grid">
         <a class="feat-card feat-tiktok" href="https://www.tiktok.com/@eatsearl" target="_blank" rel="noopener">
-          <div class="feat-icon">🍜</div>
+          <div class="feat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M6.2 4.4 10 10" stroke="#4c0f2e" stroke-width="1.8" stroke-linecap="round" />
+              <path d="M5.6 4.1 9.4 9.7" stroke="#fde68a" stroke-width="1" stroke-linecap="round" />
+              <path d="M3.7 6.6 8.8 10" stroke="#4c0f2e" stroke-width="1.8" stroke-linecap="round" />
+              <path d="M3.3 6.1 8.4 9.5" stroke="#fde68a" stroke-width="1" stroke-linecap="round" />
+              <path d="M7.5 11.3c0-2.1 1.7-3.8 3.8-3.8 1 0 1.8.3 2.5.9.5-.4 1.2-.6 1.9-.6 1.8 0 3.2 1.5 3.2 3.3v.2Z" fill="#fffaf0" stroke="#4c0f2e" stroke-width="1.4" stroke-linejoin="round" />
+              <path d="M9 10h.1M11.1 8.9h.1M13 10.4h.1M15.7 9.7h.1M16.6 11.1h.1" stroke="#cbd5e1" stroke-width="1.6" stroke-linecap="round" />
+              <path d="M5.4 11.1h13.2v1.1c0 3.5-2.9 6.3-6.6 6.3s-6.6-2.8-6.6-6.3Z" fill="#dc2626" stroke="#4c0f2e" stroke-width="1.4" stroke-linejoin="round" />
+              <path d="M6.5 13h11c-.8 2-2.7 3.3-5.5 3.3S7.3 15 6.5 13Z" fill="#ef4444" opacity="0.85" />
+              <path d="M8.4 18.5h7.2v1.6H8.4Z" fill="#be123c" stroke="#4c0f2e" stroke-width="1.2" stroke-linejoin="round" />
+              <path d="M10.3 14.4h.1M14.8 14.4h.1" stroke="#4c0f2e" stroke-width="1.4" stroke-linecap="round" />
+              <path d="M11.5 15.6c.6.5 1.5.5 2 0" stroke="#4c0f2e" stroke-width="1.1" stroke-linecap="round" />
+            </svg>
+          </div>
           <span class="feat-platform">TikTok</span>
           <p class="feat-title">Eats Earl</p>
           <p class="feat-sub">Food &amp; eating adventures</p>
         </a>
         <a class="feat-card feat-youtube" href="https://www.youtube.com/@adultingwithkuyaearl" target="_blank" rel="noopener">
-          <div class="feat-icon">▶</div>
+          <div class="feat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M9.5 7.5v9l7-4.5-7-4.5Z" />
+            </svg>
+          </div>
           <span class="feat-platform">YouTube</span>
           <p class="feat-title">Adulting with Kuya Earl</p>
           <p class="feat-sub">Finance, travel &amp; life</p>
@@ -545,7 +664,14 @@
       </div>
 
       <a class="link-btn solid" href="https://www.facebook.com/groups/thefilipinovacommunity" target="_blank" rel="noopener">
-        <div class="btn-icon">👥</div>
+        <div class="btn-icon community-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+            <circle cx="9.5" cy="7" r="4" />
+            <path d="M22 21v-2a4 4 0 0 0-3-3.9" />
+            <path d="M16 3.2a4 4 0 0 1 0 7.6" />
+          </svg>
+        </div>
         <div class="btn-text">
           <p class="btn-title">Join Our VA Community</p>
           <p class="btn-sub">Filipino VA Community on Facebook</p>
@@ -554,7 +680,14 @@
       </a>
 
       <a class="link-btn solid" href="https://virtualchampions.ph/careers" target="_blank" rel="noopener">
-        <div class="btn-icon">💼</div>
+        <div class="btn-icon careers-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <rect x="3" y="7" width="18" height="13" rx="2" />
+            <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+            <path d="M3 12h18" />
+            <path d="M10 12v1h4v-1" />
+          </svg>
+        </div>
         <div class="btn-text">
           <p class="btn-title">We're Hiring!</p>
           <p class="btn-sub">Explore remote-friendly VA roles</p>
@@ -563,7 +696,14 @@
       </a>
 
       <a class="link-btn solid" href="https://www.tiktok.com/@virtualchampions.ph" target="_blank" rel="noopener">
-        <div class="btn-icon">▶</div>
+        <div class="btn-icon tiktok-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M10.8 7.2v8.15a3.1 3.1 0 1 1-2.65-3.06" stroke="#25F4EE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12.4 5.1c.45 2.9 2.2 4.55 5.05 5" stroke="#FE2C55" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12.4 5.1v10.2a3.1 3.1 0 1 1-2.65-3.06" stroke="#0a1540" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12.4 5.1c.45 2.9 2.2 4.55 5.05 5" stroke="#0a1540" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
         <div class="btn-text">
           <p class="btn-title">VCPH on TikTok</p>
           <p class="btn-sub">Tips, automation &amp; team content</p>
@@ -579,7 +719,12 @@
       </div>
 
       <a class="link-btn outline" href="https://try.web.clickup.com/1f8aum8fz2gg-tdpvtq" target="_blank" rel="noopener">
-        <div class="btn-icon">✓</div>
+        <div class="btn-icon tool-clickup" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <circle cx="12" cy="12" r="8" />
+            <path d="m8.8 12.2 2.2 2.2 4.6-5" />
+          </svg>
+        </div>
         <div class="btn-text">
           <p class="btn-title">ClickUp <span class="aff">affiliate</span></p>
           <p class="btn-sub">Project management we live by</p>
@@ -588,7 +733,11 @@
       </a>
 
       <a class="link-btn outline" href="https://www.make.com/en/register?pc=clickupintegration" target="_blank" rel="noopener">
-        <div class="btn-icon">⚡</div>
+        <div class="btn-icon tool-make" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M13 2 5.8 13h5.7L10 22l8.2-12.6h-6Z" />
+          </svg>
+        </div>
         <div class="btn-text">
           <p class="btn-title">Make.com <span class="aff">affiliate</span></p>
           <p class="btn-sub">Automation without the headache</p>
@@ -597,7 +746,15 @@
       </a>
 
       <a class="link-btn outline" href="https://affiliate.hubstaff.com/hnhp02tw76qr" target="_blank" rel="noopener">
-        <div class="btn-icon">⏱</div>
+        <div class="btn-icon tool-hubstaff" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <circle cx="12" cy="13" r="7" />
+            <path d="M12 13V9" />
+            <path d="m12 13 3 2" />
+            <path d="M9 2h6" />
+            <path d="M12 2v3" />
+          </svg>
+        </div>
         <div class="btn-text">
           <p class="btn-title">Hubstaff <span class="aff">affiliate</span></p>
           <p class="btn-sub">Time tracking for remote teams</p>
@@ -606,7 +763,15 @@
       </a>
 
       <a class="link-btn outline" href="https://rize.io/?via=virtualchampions" target="_blank" rel="noopener">
-        <div class="btn-icon">📊</div>
+        <div class="btn-icon tool-rize" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M4 19V5" />
+            <path d="M4 19h16" />
+            <rect x="7" y="11" width="3" height="5" rx="1" />
+            <rect x="12" y="8" width="3" height="8" rx="1" />
+            <rect x="17" y="5" width="3" height="11" rx="1" />
+          </svg>
+        </div>
         <div class="btn-text">
           <p class="btn-title">Rize <span class="aff">affiliate</span></p>
           <p class="btn-sub">AI focus &amp; time coaching</p>
@@ -615,7 +780,12 @@
       </a>
 
       <a class="link-btn outline" href="https://gamma.app/signup?r=k6hu60gycwyxm6h" target="_blank" rel="noopener">
-        <div class="btn-icon">✦</div>
+        <div class="btn-icon tool-gamma" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M12 3.5 13.7 9l5.5 1.7-5.5 1.7L12 18l-1.7-5.6-5.5-1.7L10.3 9Z" />
+            <path d="M18.5 15.5 19 17l1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5Z" />
+          </svg>
+        </div>
         <div class="btn-text">
           <p class="btn-title">Gamma.app <span class="aff">affiliate</span></p>
           <p class="btn-sub">AI-powered decks &amp; docs</p>
