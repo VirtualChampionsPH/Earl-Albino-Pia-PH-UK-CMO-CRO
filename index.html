@@ -362,6 +362,79 @@
       line-height: 1.4;
     }
 
+    /* ── Website cards ── */
+    .website-list {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .website-card {
+      min-height: 64px;
+      border-radius: 12px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      background: #fff;
+      border: 1.5px solid var(--blue-mid);
+      transition: transform 0.15s var(--ease-out), background 0.15s;
+    }
+
+    .website-card:hover {
+      background: #fbfcff;
+      transform: translateY(-1px);
+    }
+
+    .website-card:active {
+      transform: translateY(0);
+    }
+
+    .website-card.vc {
+      border-color: #b9c9ff;
+    }
+
+    .website-card.introllect {
+      border-color: #a7f3d0;
+    }
+
+    .website-logo {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .website-copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .website-title {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+    }
+
+    .website-sub {
+      margin-top: 2px;
+      font-size: 10.5px;
+      color: var(--navy-muted);
+      line-height: 1.35;
+    }
+
+    .website-link {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--blue);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
     /* ── Standard link buttons ── */
     .link-btn {
       display: flex;
@@ -656,6 +729,32 @@
           <span class="feat-platform">YouTube</span>
           <p class="feat-title">Adulting with Kuya Earl</p>
           <p class="feat-sub">Finance, travel &amp; life</p>
+        </a>
+      </div>
+
+      <!-- Websites -->
+      <div class="sec">
+        <div class="sec-line"></div>
+        <span class="sec-text">Visit Our Websites</span>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="website-list">
+        <a class="website-card vc" href="https://virtualchampions.ph" target="_blank" rel="noopener">
+          <img class="website-logo" src="https://assets.cdn.filesafe.space/uSnUEDhJvTm8j8G3HmZy/media/6a2672366a06f03d44a5aeba.png" alt="" />
+          <div class="website-copy">
+            <p class="website-title">Virtual Champions</p>
+            <p class="website-sub">Remote team growth partner</p>
+          </div>
+          <span class="website-link">Visit →</span>
+        </a>
+        <a class="website-card introllect" href="https://introllect.com" target="_blank" rel="noopener">
+          <img class="website-logo" src="https://assets.cdn.filesafe.space/uSnUEDhJvTm8j8G3HmZy/media/6a26723649e55f8519a92787.png" alt="" />
+          <div class="website-copy">
+            <p class="website-title">Introllect</p>
+            <p class="website-sub">Systems and strategy studio</p>
+          </div>
+          <span class="website-link">Visit →</span>
         </a>
       </div>
 
